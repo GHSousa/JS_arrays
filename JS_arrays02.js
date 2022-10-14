@@ -39,17 +39,46 @@ console.log(salasUnificadas);
 
 //LISTA DE DUAS DIMENSOES
 
-const pessoas = ['João', 'Ana', 'Caio', 'Lara'];
-const mediaDasPessoas = [10, 7, 9, 6];
+// const pessoas = ['João', 'Ana', 'Caio', 'Lara'];
+// const mediaDasPessoas = [10, 7, 9, 6];
 
-let listaDeNotasEAlunos = [pessoas, mediaDasPessoas];
-// Isso é uma lista em 2 dimenções. e esta juntando sem somar as 2
+// let listaDeNotasEAlunos = [pessoas, mediaDasPessoas];
+// // Isso é uma lista em 2 dimenções. e esta juntando sem somar as 2
 
 
-//                  o Primeiro array é referente a variavel listaDeNotas, sendo o indice 0 dela a variavel Pessoas
-//                  o Segundo array é referente a variavel escolhida no primeiro array, sendo o indice escolhido dentro dele mesmo. 
-console.log(`${listaDeNotasEAlunos[0][0]}, a sua media é ${listaDeNotasEAlunos}[1][0]`)
-// Aqui da pra chamar as pessoas da respectiva lista, no exemplo acima chamamos o indice 0, sendo pessoa + nota
+// //                  o Primeiro array é referente a variavel listaDeNotas, sendo o indice 0 dela a variavel Pessoas
+// //                  o Segundo array é referente a variavel escolhida no primeiro array, sendo o indice escolhido dentro dele mesmo. 
+// console.log(`${listaDeNotasEAlunos[0][0]}, a sua media é ${listaDeNotasEAlunos}[1][0]`)
+// // Aqui da pra chamar as pessoas da respectiva lista, no exemplo acima chamamos o indice 0, sendo pessoa + nota
+
+// //BUSCANDO NA LISTA
+
+const listaDePessoas = ['João', 'Ana', 'Caio', 'Lara'];
+const mediaDasNotas = [10, 7, 9, 6];
+
+let pessoasENotas = [listaDePessoas, mediaDasNotas];
+
+const exibeNomeNota = (nomeDoAluno) => {
+    if (pessoasENotas[0].includes(nomeDoAluno)){
+        let indice = pessoasENotas[0].indexOf(nomeDoAluno)
+        return pessoasENotas[0][indice] + 'sua media é ' + pessoasENotas[1][indice]
+    } else {
+        return 'Aluno não cadastrado'
+    }
+}
+ console.log(exibeNomeNota("Ana"))
+
+ // MUITA COISA PRA EXPLICAR, AGORA TA FICANDO BOM 
+ // 1 ARROW FUNCTION PRA EXERCITAR ISSO.
+ // 2 PARAMETRO DEFINIDO COMO nomeDoAluno 
+ // 3 .includes AQUI SERVE PARA INCLUIR O nomeDoAluno COMO PARAMETRO. RETORNA UM VERDADEIRO OU FALSO
+ // 4 A VARIAVEL indice PARA SALVAR QUE: CASO O PARAMETRO EXISTA DENTRO DESSA ARRAY
+ // 5 .indexOf RETORNA O NUMERO DE INDICE QUE O PARAMETRO ESTA DENTRO DO ARRAY. NO EXEMPLO ACIMA É O INDICE 3 QUE FICA ARMAZENADO NA VARIAVEL
+ // 6 AI ELA RETORNA A pessoasENotas NO INDICE [0] + A VARIAVEL INDICE QUE É 3
+ // 7 AI ELA FAZ A MESMA COISA NO FINAL PEGANDO O INDICE [1] E A VARIAVEL INDICE QUE É 3. 
+ // PARECE MAIS DIFICIL QUE É, NO GERAL É UMA LIGAÇÃO DE PONTOS
+ 
+
 
 
 
