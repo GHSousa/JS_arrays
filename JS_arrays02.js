@@ -1,72 +1,72 @@
-// ALTERANDO OS ARREYS
+// // ALTERANDO OS ARREYS
 
-const nomes = [ 'Joao', 'Juliana', 'Ana', 'Caio', 'Lara', 'Marjorie', 'Guilherme', 'Aline', 'Fabiana', 'Andre', 'Carlos', 'Paulo', 'Bia', 'Vivian', 'Isabela', 'Vinicius', 'Renan', 'Renata', 'Daisy', 'Camilo'];
+// const nomes = [ 'Joao', 'Juliana', 'Ana', 'Caio', 'Lara', 'Marjorie', 'Guilherme', 'Aline', 'Fabiana', 'Andre', 'Carlos', 'Paulo', 'Bia', 'Vivian', 'Isabela', 'Vinicius', 'Renan', 'Renata', 'Daisy', 'Camilo'];
 
-const sala1 = nomes.slice(0, nomes.length/2)
-const sala2 = nomes.slice(nomes.length/2)
+// const sala1 = nomes.slice(0, nomes.length/2)
+// const sala2 = nomes.slice(nomes.length/2)
 
-console.log(`Alunos da sala 1: ${sala1}`);
-console.log(`Alunos da sala 2: ${sala2}`);
+// console.log(`Alunos da sala 1: ${sala1}`);
+// console.log(`Alunos da sala 2: ${sala2}`);
 
-//ATUALIZANDO LISTAS
-
-
-// Remova Ana e caio
-// Adicione o Rodrigo no lugar
-
-const listaDeChamada = ['João', 'Ana', 'Caio', 'Lara', 'Marjorie', 'Leo'];
-
-listaDeChamada.splice(1,2,'Rodrigo');
-//O splice remove os itens em partes.
-// 1 criterio é aonde ele começa. No caso no indice 1
-// 2 criterio é quantos itens vamos remover. No caso 2
-// 3 criterio é colocarmos o que vai no lugar. No caso Rodrigo. Pode ficar vazio se n quiser adicionar nada. 
-    ////listaDeChamada.splice[2, 0, 'Rodrigo'];
-    //// Nesse caso aqui, vamos até o indice 2, não deletamos nada, e adicionamos o rodrigo alí
+// //ATUALIZANDO LISTAS
 
 
-console.log(`Lista de chamada: ${listaDeChamada}`);
+// // Remova Ana e caio
+// // Adicione o Rodrigo no lugar
 
-//JUNTANDO TURMAS
+// const listaDeChamada = ['João', 'Ana', 'Caio', 'Lara', 'Marjorie', 'Leo'];
 
-const salaPyton = ['Joao', 'Juliana', 'Ana'];
-const salaJS = ['Caio', 'Lara', 'Marjorie'];
-
-const salasUnificadas = salaPyton.concat(salaJS);
-//o .concat unifica uma const com a outra, voce só precisa adicionar a outra como parametro
-//Importante avisar que ele não mexe na variavel original. Sendo necessario criar uma nova
-console.log(salasUnificadas);
-
-//LISTA DE DUAS DIMENSOES
-
-// const pessoas = ['João', 'Ana', 'Caio', 'Lara'];
-// const mediaDasPessoas = [10, 7, 9, 6];
-
-// let listaDeNotasEAlunos = [pessoas, mediaDasPessoas];
-// // Isso é uma lista em 2 dimenções. e esta juntando sem somar as 2
+// listaDeChamada.splice(1,2,'Rodrigo');
+// //O splice remove os itens em partes.
+// // 1 criterio é aonde ele começa. No caso no indice 1
+// // 2 criterio é quantos itens vamos remover. No caso 2
+// // 3 criterio é colocarmos o que vai no lugar. No caso Rodrigo. Pode ficar vazio se n quiser adicionar nada. 
+//     ////listaDeChamada.splice[2, 0, 'Rodrigo'];
+//     //// Nesse caso aqui, vamos até o indice 2, não deletamos nada, e adicionamos o rodrigo alí
 
 
-// //                  o Primeiro array é referente a variavel listaDeNotas, sendo o indice 0 dela a variavel Pessoas
-// //                  o Segundo array é referente a variavel escolhida no primeiro array, sendo o indice escolhido dentro dele mesmo. 
-// console.log(`${listaDeNotasEAlunos[0][0]}, a sua media é ${listaDeNotasEAlunos}[1][0]`)
-// // Aqui da pra chamar as pessoas da respectiva lista, no exemplo acima chamamos o indice 0, sendo pessoa + nota
+// console.log(`Lista de chamada: ${listaDeChamada}`);
 
-// //BUSCANDO NA LISTA
+// //JUNTANDO TURMAS
 
-const listaDePessoas = ['João', 'Ana', 'Caio', 'Lara'];
-const mediaDasNotas = [10, 7, 9, 6];
+// const salaPyton = ['Joao', 'Juliana', 'Ana'];
+// const salaJS = ['Caio', 'Lara', 'Marjorie'];
 
-let pessoasENotas = [listaDePessoas, mediaDasNotas];
+// const salasUnificadas = salaPyton.concat(salaJS);
+// //o .concat unifica uma const com a outra, voce só precisa adicionar a outra como parametro
+// //Importante avisar que ele não mexe na variavel original. Sendo necessario criar uma nova
+// console.log(salasUnificadas);
 
-const exibeNomeNota = (nomeDoAluno) => {
-    if (pessoasENotas[0].includes(nomeDoAluno)){
-        let indice = pessoasENotas[0].indexOf(nomeDoAluno)
-        return pessoasENotas[0][indice] + 'sua media é ' + pessoasENotas[1][indice]
-    } else {
-        return 'Aluno não cadastrado'
-    }
-}
- console.log(exibeNomeNota("Ana"))
+// //LISTA DE DUAS DIMENSOES
+
+// // const pessoas = ['João', 'Ana', 'Caio', 'Lara'];
+// // const mediaDasPessoas = [10, 7, 9, 6];
+
+// // let listaDeNotasEAlunos = [pessoas, mediaDasPessoas];
+// // // Isso é uma lista em 2 dimenções. e esta juntando sem somar as 2
+
+
+// // //                  o Primeiro array é referente a variavel listaDeNotas, sendo o indice 0 dela a variavel Pessoas
+// // //                  o Segundo array é referente a variavel escolhida no primeiro array, sendo o indice escolhido dentro dele mesmo. 
+// // console.log(`${listaDeNotasEAlunos[0][0]}, a sua media é ${listaDeNotasEAlunos}[1][0]`)
+// // // Aqui da pra chamar as pessoas da respectiva lista, no exemplo acima chamamos o indice 0, sendo pessoa + nota
+
+// // //BUSCANDO NA LISTA
+
+// const listaDePessoas = ['João', 'Ana', 'Caio', 'Lara'];
+// const mediaDasNotas = [10, 7, 9, 6];
+
+// let pessoasENotas = [listaDePessoas, mediaDasNotas];
+
+// const exibeNomeNota = (nomeDoAluno) => {
+//     if (pessoasENotas[0].includes(nomeDoAluno)){
+//         let indice = pessoasENotas[0].indexOf(nomeDoAluno)
+//         return pessoasENotas[0][indice] + 'sua media é ' + pessoasENotas[1][indice]
+//     } else {
+//         return 'Aluno não cadastrado'
+//     }
+// }
+//  console.log(exibeNomeNota("Ana"))
 
  // MUITA COISA PRA EXPLICAR, AGORA TA FICANDO BOM 
  // 1 ARROW FUNCTION PRA EXERCITAR ISSO.
@@ -78,9 +78,47 @@ const exibeNomeNota = (nomeDoAluno) => {
  // 7 AI ELA FAZ A MESMA COISA NO FINAL PEGANDO O INDICE [1] E A VARIAVEL INDICE QUE É 3. 
  // PARECE MAIS DIFICIL QUE É, NO GERAL É UMA LIGAÇÃO DE PONTOS
  
+// ESTUDANDO O FOR
+
+// const numeros = [100, 200, 300, 400, 500, 600];
+
+// for (let i = 0; i < numeros.length; i++){
+//     console.log(i, numeros[i]);
+// }
+
+//MEDIA COM O FOR
+
+// const notas = [10, 6.5, 8, 7.5];
+
+// let somaDasNotas = 0
+
+// for(let 1 = 0; i < notas.length; i++){
+//     somaDasNotas += notas[i];
+// }
+
+// let media = somaDasNotas/notas.length;
+
+// console.log(media);
+
+//MEDIA COM O FOREACH
+
+const notas = [10, 6.5, 8, 7.5];
+let somaDasNotas = 0
+
+//CALL BACK
+//MAIS COMUM COM ARROW FUNCTION, A IDEIA É QUE: FOREACH(PARA CADA) UMA DAS VARIAVEIS CITADAS(NOTAS), ELE EXECUTE A SOMA AO PARAMETRO NOTA
+notas.forEach(nota => {
+    somaDasNotas += nota
+})
+//FORMA MENOS COMUM DE EXECUTADA, MAIS FUNCIONA. FAZ NA ARROW, MAIS FACIL E LEGAL
+notas.forEach(function(nota){
+    somaDasNotas += nota  //O NOTA NOS 2 CASOS É UM PARAMETRO DA FUNÇÃO, CRIADO ESPECIFICAMENTE PARA ESSA SITUAÇÃO
+})
 
 
+let media = somaDasNotas/notas.length
 
+console.length(media)
 
 
 
